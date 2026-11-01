@@ -1,0 +1,239 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --neutral-800: #0f0f12;
+    --neutral-700: #1a1a1d;
+    --neutral-600: #434347;
+    --neutral-500: #929298;
+    --neutral-400: #c5c5ca;
+    --neutral-300: #e3e3e7;
+    --neutral-200: #f5f5f9;
+    --neutral-100: #ffffff;
+    --accent-primary: #7928ca;
+    --accent-electric: #8b5cf6;
+    --accent-purple: #a855f7;
+    --accent-neon: #c084fc;
+    --general-shadow: 0 24px 65px 0 rgba(0, 0, 0, 0.65);
+    --general-shadow-btn: 0 8px 25px 0 rgba(121, 40, 202, 0.45);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #0f0f12;
+  }
+
+  body {
+    background-color: #0f0f12;
+    color: #c5c5ca;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Custom Clean Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #0f0f12;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #434347;
+    border-radius: 0;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #8b5cf6;
+  }
+}
+
+/* Blockchain X / fix2ship Specific Styles */
+.bg-neutral-800 {
+  background-color: #0f0f12;
+}
+
+.bg-neutral-700 {
+  background-color: #1a1a1d;
+}
+
+.bg-neutral-600 {
+  background-color: #434347;
+}
+
+/* Primary Bold Block Button (Blockchain X signature) */
+.btn-primary-bx {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #7928ca;
+  background-color: #7928ca;
+  color: #ffffff;
+  text-align: center;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.1;
+  padding: 22px 36px;
+  border-radius: 0;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 6px 20px 0 rgba(121, 40, 202, 0.35);
+  cursor: pointer;
+}
+
+.btn-primary-bx:hover {
+  background-color: #8b5cf6;
+  border-color: #8b5cf6;
+  box-shadow: 0 10px 30px 0 rgba(139, 92, 246, 0.55);
+  transform: translate3d(0, -4px, 0.01px);
+}
+
+.btn-primary-bx.small {
+  padding: 14px 24px;
+  font-size: 13px;
+}
+
+/* Secondary Button */
+.btn-secondary-bx {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #434347;
+  background-color: #1a1a1d;
+  color: #ffffff;
+  text-align: center;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.1;
+  padding: 22px 36px;
+  border-radius: 0;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.btn-secondary-bx:hover {
+  border-color: #c5c5ca;
+  background-color: #26262a;
+  transform: translate3d(0, -4px, 0.01px);
+}
+
+/* Blockchain X Arrow Button Circle */
+.link-arrow-circle {
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  min-width: 58px;
+  height: 58px;
+  min-height: 58px;
+  margin-left: 18px;
+  transition: all 0.3s ease;
+}
+
+.link-arrow-circle:hover {
+  border-color: #a855f7;
+  background-color: #7928ca;
+  transform: scale(1.08) rotate(45deg);
+}
+
+/* Giant Outline Numbers (01, 02, 03, 04, 05, 06) */
+.text-big-outline-bx {
+  color: #0f0f12;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 260px;
+  line-height: 0.9;
+  user-select: none;
+  pointer-events: none;
+  -webkit-text-stroke: 2px #34343a;
+  opacity: 0.6;
+}
+
+@media (max-width: 768px) {
+  .text-big-outline-bx {
+    font-size: 140px;
+  }
+}
+
+/* Blockchain X Signature Card */
+.card-bx {
+  background-color: #1a1a1d;
+  border: 1px solid #2a2a2f;
+  box-shadow: 0 24px 65px 0 rgba(0, 0, 0, 0.55);
+  border-radius: 0;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card-bx:hover {
+  border-color: #434347;
+  transform: translate3d(0, -4px, 0.01px);
+}
+
+/* Top Sticky Header */
+.header-bx {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: rgba(26, 26, 29, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid #2a2a2f;
+}
+
+/* Hero Left Border Accent */
+.hero-v1-border-left {
+  border-left: 2px solid #434347;
+  padding-left: 48px;
+}
+
+@media (max-width: 768px) {
+  .hero-v1-border-left {
+    padding-left: 20px;
+    border-left-width: 2px;
+  }
+}
+
+/* Shimmer and Glows */
+@keyframes shiny-text {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+.animate-shiny-text {
+  background: linear-gradient(
+    110deg,
+    #ffffff 20%,
+    #e9d5ff 40%,
+    #a855f7 50%,
+    #e9d5ff 60%,
+    #ffffff 80%
+  );
+  background-size: 200% auto;
+  color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shiny-text 6s ease-in-out infinite;
+}
+
+/* Mesh Background Gradient */
+.bg-mesh-blockchain {
+  background-image: 
+    radial-gradient(at 15% 15%, rgba(121, 40, 202, 0.15) 0px, transparent 55%),
+    radial-gradient(at 85% 25%, rgba(139, 92, 246, 0.12) 0px, transparent 50%),
+    radial-gradient(at 50% 80%, rgba(88, 28, 135, 0.1) 0px, transparent 60%);
+}
